@@ -8,8 +8,9 @@ export default function Fruits() {
     { name: "Apple", price: 200, emoji: "🍎" },
     { name: "Banana", price: 120, emoji: "🍌" },
     { name: "Peach", price: 160, emoji: "🍑" },
-    { name: "Watermelon", price: 30, emoji: "🍉" }
-  ]
+    { name: "Watermelon", price: 30, emoji: "🍉" },
+  ];
+
   //map can be used to loop through array & perform any functions in it. map returns the new array
   return (
     //for simple array
@@ -18,7 +19,7 @@ export default function Fruits() {
         <li key={fruit}>{fruit}</li>
       ))}
     </ol>*/
-    //for array object
+    //for array of object
     /* <ol>
       {fruits.map(fruit => (
         <li key={fruit.name}>{fruit.name}'s price is Rs. {fruit.price} and looks like {fruit.emoji}</li>
@@ -26,8 +27,13 @@ export default function Fruits() {
     </ol> */
     //from component
     <ol>
-      {fruits.map(fruit => (
-        <Fruit key={fruit.name} name={fruit.name} price={fruit.price} emoji={fruit.emoji} />
+      {fruits.map((fruit) => (
+        <Fruit
+          key={fruit.name}
+          name={fruit.name}
+          price={fruit.price}
+          emoji={fruit.emoji}
+        />
       ))}
     </ol>
   );
