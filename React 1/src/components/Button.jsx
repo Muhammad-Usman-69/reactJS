@@ -5,20 +5,20 @@
 //we can directly take properties from parentheses instead of getting code by following
 function Button({ name, message, emoji, array, object }) {
   // function Button(props) {
-  //props destruction
-  // let { name, message, emoji, array, object } = props;
-  //name must be like attributes
-  return (
-    <button>
-      Salam Ya {name} {message} {emoji} {array } {object.height} {object.race}
-    </button>
-  );
   //if not destructing use
   /*return (
     <button>
       Salam Ya {props.name} {props.message}
     </button>
   );*/
+  //props destruction (function syntax at line 7)
+  // let { name, message, emoji, array, object } = props;
+  //name must be like attributes
+  return (
+    <button>
+      Salam Ya {name} {message} {emoji} {array} {object.height} {object.race}
+    </button>
+  );
 }
 
 export default Button;

@@ -1,6 +1,7 @@
 import Hello from "./components/Hello";
 import Button from "./components/Button";
 import Fruits from "./components/Fruits";
+import Condition from "./components/Condition";
 
 //we can reuse the components
 //we can pass props by using attributes
@@ -15,6 +16,7 @@ function App() {
       <Hello />
       <Button name="Ubaid" message="___" emoji="💋" array={arr} object={obj} />
       <Fruits />
+      <Condition />
     </div>
   );
 }
