@@ -5,6 +5,7 @@ import Condition from "./components/Condition";
 import FruitCondition from "./components/FruitCondition";
 import Message from "./components/Message";
 import Counter from "./components/Counter";
+import Form from "./components/Form";
 
 //we can reuse the components
 //we can pass props by using attributes
@@ -21,8 +22,9 @@ function App() {
       <Fruits />
       <Condition />
       <FruitCondition />
-      <Message /> */}
-      <Counter />
+      <Message />
+      <Counter /> */}
+      <Form />
     </div>
   );
 }
