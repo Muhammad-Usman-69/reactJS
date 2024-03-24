@@ -1,8 +1,11 @@
-function App() {
+import Input from "./components/Input"
+import List from "./components/List"
 
+function App() {
   return (
     <div className="App">
-      App
+      <Input />
+      <List />
     </div>
   )
 }
