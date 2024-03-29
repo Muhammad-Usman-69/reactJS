@@ -4,7 +4,7 @@ import style from "./input.module.css";
 
 export default function Input() {
   //input from form
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState({ name: "", status: false });
   //list of inputs
   const [list, setlist] = useState([]);
   //handling inputs
@@ -14,7 +14,7 @@ export default function Input() {
     //putting input to list using spread operators
     setlist([...list, input]);
     //clearing input
-    setInput("");
+    setInput({name: ""});
   }
   return (
     <>
@@ -22,8 +22,8 @@ export default function Input() {
         <input
           className={style.input}
           type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={input.name}
+          onChange={(e) => setInput({name: e.target.value, status: false})}
           placeholder="Have Dinner at 4'O Clock"
         />
         <button className={style.button} type="submit">
@@ -33,7 +33,7 @@ export default function Input() {
       <div className={style.list_container}>
         {list.map((item) => (
           //passing it to list
-          <List key={item} item={item} list={list} setlist={setlist} />
+          <List key={item.name} item={item} list={list} setlist={setlist} />
         ))}
       </div>
     </>
