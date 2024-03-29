@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  padding: 16px;
+  box-shadow: 0px 0px 4px black;
+  background-color: yellow;
+}
+
+.input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.list_container {
+  margin: 40px;
+  padding: 0 20px;
+  background-color: rgb(248, 215, 69);
+  box-shadow: 0 0 4px black;
+}
+
+.list_container hr {
+  margin: 0;
+}
+
+.list_container hr:last-child {
+  display: none;
+}

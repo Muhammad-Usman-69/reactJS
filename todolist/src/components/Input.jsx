@@ -1,5 +1,6 @@
 import { useState } from "react";
 import List from "./List";
+import style from "./input.module.css";
 
 export default function Input() {
   //input from form
@@ -16,21 +17,25 @@ export default function Input() {
     setInput("");
   }
   return (
-    <div>
-      <form onSubmit={(e) => inputHandle(e)}>
+    <>
+      <form className={style.form} onSubmit={(e) => inputHandle(e)}>
         <input
+          className={style.input}
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          placeholder="Have Dinner at 4'O Clock"
         />
-        <button type="submit">Add</button>
+        <button className={style.button} type="submit">
+          Add
+        </button>
       </form>
-      <div>
+      <div className={style.list_container}>
         {list.map((item) => (
           //passing it to list
           <List key={item} list={item} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
