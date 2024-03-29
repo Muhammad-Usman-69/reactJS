@@ -4,3 +4,14 @@
     border-radius: 4px;
     font-size: 24px;
 }
+
+.button {
+    float: right;
+    color: white;
+    font-weight: 600;
+    padding: 10px 14px;
+    border: none;
+    background-color: rgb(255, 85, 0);
+    border-radius: 6px;
+    cursor: pointer;
+}

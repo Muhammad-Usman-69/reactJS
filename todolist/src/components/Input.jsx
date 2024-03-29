@@ -33,7 +33,7 @@ export default function Input() {
       <div className={style.list_container}>
         {list.map((item) => (
           //passing it to list
-          <List key={item} list={item} />
+          <List key={item} item={item} list={list} setlist={setlist} />
         ))}
       </div>
     </>

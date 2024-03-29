@@ -33,6 +33,7 @@
 
 .list_container hr {
   margin: 0;
+  border: 1px solid gray;
 }
 
 .list_container hr:last-child {
