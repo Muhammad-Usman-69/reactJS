@@ -1,13 +1,15 @@
 import { useState } from "react";
 import List from "./List";
 import style from "./form.module.css";
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 export default function Input() {
   //input from form
   const [input, setInput] = useState({ name: "", status: false });
   //list of inputs
   const [list, setlist] = useState([]);
+  //sorting list
+  list.sort((a, b) => a.status - b.status);
   //handling inputs
   function inputHandle(e) {
     //prevent default submit
