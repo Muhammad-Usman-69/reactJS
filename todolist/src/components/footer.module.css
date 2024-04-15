@@ -1,0 +1,16 @@
+.container {
+    margin-top: auto;
+    background-color: yellow;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 0 6px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container p {
+    margin: 0;
+}
