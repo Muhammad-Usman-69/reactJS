@@ -8,13 +8,24 @@ export default function Search() {
   //state for query
   const [query, setQuery] = useState("Chicken Tikka");
 
+
   //hooks are function in comp like useState
   //every hook has some function
   //useEffect hook allows us to sync with an external system
   /* syntax is
   useEffect(() => {}, []); */
   //"()=>{}" is the callback function and "[]" is the dependency for syncronization
+  /* syntax is
+  useEffect(() => {}, []); */
+  //"()=>{}" is the callback function and "[]" is the dependency for syncronization
   useEffect(() => {
+    //making function asyncrhonous
+    async function fetchData() {
+      const response = await fetch(`${API}?apiKey=${API_KEY}&query=${query}`);
+      const data = await response.json();
+    }
+    //triggering function
+    fetchData();
     //making function asyncrhonous
     async function fetchData() {
       const response = await fetch(`${API}?apiKey=${API_KEY}&query=${query}`);
