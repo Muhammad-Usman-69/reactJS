@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from "../modules/search.module.css"
 
 export default function Search({ foodData, setFoodData }) {
   //initializing some things
@@ -15,8 +16,8 @@ export default function Search({ foodData, setFoodData }) {
   useEffect(() => {
     //making function asyncrhonous
     async function fetchData() {
-      const response = await fetch(`${API}?apiKey=${API_KEY}&query=${query}`);
-      const data = await response.json();
+      // const response = await fetch(`${API}?apiKey=${API_KEY}&query=${query}`);
+      // const data = await response.json();
 
       //setting data
       setFoodData(data.results);
@@ -25,13 +26,15 @@ export default function Search({ foodData, setFoodData }) {
     fetchData();
   }, [query]);
   return (
-    <div>
+    <div className={style.container}>
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         name="query"
         id="query"
+        className={style.input}
+        placeholder="Search any food..."
       />
     </div>
   );
