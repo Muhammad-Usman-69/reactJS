@@ -1,3 +1,4 @@
 .container {
-    display: flex;
+  display: flex;
+  margin: 24px;
 }

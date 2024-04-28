@@ -1,13 +1,13 @@
 .container {
   width: 300px;
   border-radius: 8px;
-  margin: 24px;
+  margin: 24px 24px 24px 0;
   background-color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .container:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .img {
@@ -18,16 +18,15 @@
 
 .txt {
   font-size: 18px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+
   font-weight: 500;
   padding: 0 24px;
   text-align: center;
 }
 
 .btn_container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
@@ -42,5 +41,5 @@
 }
 
 .btn:hover {
-  background-color: rgb(23, 82, 209);   
+  background-color: rgb(23, 82, 209);
 }
